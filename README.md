@@ -162,3 +162,7 @@ Agora, é só usar esse Terminal com Rosetta para iniciar a aplicação.
 Os principais pacotes dessa aplicação são:
 
 - [react-native](https://reactnative.dev/docs/0.68/getting-started): 0.68
+
+## Suporte ao Hermes
+
+Habilitar o [hermes](https://reactnative.dev/docs/0.68/hermes) para permitir maior experiência de velocidade no boot inicial do aplicativo e maior gerenciamento de consumo de memória.
