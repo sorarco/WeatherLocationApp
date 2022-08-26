@@ -139,6 +139,14 @@ yarn android
 yarn ios
 ```
 
+```bash
+yarn clean
+```
+
+**Caso tenha problemas com permissão ao executar o arquivo clean.sh**
+
+chmod 775 clean.sh
+
 **Observação importante**: Caso você tenha algum problema ao rodar o projeto em dispositivos Apple com chipset M1, você pode tentar rodá-lo usando o Rosetta:
 
 1. Abra a pasta de _Applications_;
