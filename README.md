@@ -170,3 +170,25 @@ Habilitar o [hermes](https://reactnative.dev/docs/0.68/hermes) para permitir mai
 ## Configuração de ambientes
 
 Fornecer segurança e boas práticas na separação de configs de dados com base no [12 factor](https://12factor.net/config) atráves do módulo [react-native-config](https://github.com/luggit/react-native-config)
+
+## Estrutura de projeto
+
+```
+[src]
+    + [__tests__]
+    + [api]
+    + [components]
+    + [dto]
+    + [services]
+    + [screens]
+    + [store]
+```
+
+As definições de implementação a partir da estrutura de projeto podem ser usadas por meio de caminhos absolutos.
+
+```
+import createLogger from '@services/log.service';
+
+const log = createLogger('log');
+log('some log');
+```
