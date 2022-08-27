@@ -132,11 +132,11 @@ Se tudo ocorrer bem, você poderá iniciar o dispositivo clicando no botão de P
 Após iniciar o dispositivo, você poderá rodar o aplicativo usando:
 
 ```bash
-yarn android
+yarn android:dev-stg
 ```
 
 ```bash
-yarn ios
+yarn ios:dev-stg
 ```
 
 ```bash
@@ -166,3 +166,7 @@ Os principais pacotes dessa aplicação são:
 ## Suporte ao Hermes
 
 Habilitar o [hermes](https://reactnative.dev/docs/0.68/hermes) para permitir maior experiência de velocidade no boot inicial do aplicativo e maior gerenciamento de consumo de memória.
+
+## Configuração de ambientes
+
+Fornecer segurança e boas práticas na separação de configs de dados com base no [12 factor](https://12factor.net/config) atráves do módulo [react-native-config](https://github.com/luggit/react-native-config)
