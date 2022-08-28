@@ -13,6 +13,7 @@ module.exports = {
 					'@screens': './src/screens',
 					'@store': './src/store',
 					'@services': './src/services',
+					'@themes': './src/themes',
 					'@tests': './src/__tests__',
 				},
 				extensions: ['.js', '.jsx', '.tsx', '.ios.js', 'android.js'],
