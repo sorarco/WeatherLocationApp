@@ -18,6 +18,7 @@
     "react-native": "0.68.0",
     "react-native-config": "^1.4.6",
     "react-native-flipper": "^0.162.0",
+    "react-native-geolocation-service": "^5.3.0",
     "react-redux": "^8.0.2",
     "redux-flipper": "^2.0.2"
   },

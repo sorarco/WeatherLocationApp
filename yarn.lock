@@ -6069,6 +6069,11 @@ react-native-flipper@^0.162.0:
   resolved "https://registry.yarnpkg.com/react-native-flipper/-/react-native-flipper-0.162.0.tgz#9919adb743dae50a80d914eaa3a53eb33eaf39ec"
   integrity sha512-htXhzHDKWkMaBivc+SLTxqT1GkJxR2rrXobXlAhFYrvaQ6ws1KA6peqQssEiPSrXQJ2Z2oRXQ+yrlPKaBC/Hjg==
 
+react-native-geolocation-service@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-geolocation-service/-/react-native-geolocation-service-5.3.0.tgz#2f361ce003457651b656266d5e1328f3e335e693"
+  integrity sha512-imK/yjxqPMIydSjZLpqPh7U073Fpe1JAaZHiIzLzWnzv89OGey6t4Zj/POg3+xtmGcbDoMcEOx8hbNY/fXaD9Q==
+
 react-native-gradle-plugin@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.5.tgz#1f20d437b140eda65b6e3bdf6eb102bbab1a5a10"
