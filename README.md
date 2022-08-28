@@ -192,3 +192,9 @@ import createLogger from '@services/log.service';
 const log = createLogger('log');
 log('some log');
 ```
+
+## 🌐 Lidando com estados e requisições
+
+O gerenciamento dos estados na aplicação é baseado no [redux-toolkit](https://redux-toolkit.js.org/).
+
+Para lidar com requisições entre api's além de oferecer controle de cache sem a necessidade de escrever estas features, é usado o [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
