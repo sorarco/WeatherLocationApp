@@ -1,3 +1,4 @@
+import {Button} from '@components/Button/index';
 import {Text} from '@components/Text/index';
 import createLogger from '@services/log.service';
 import React, {useState} from 'react';
@@ -7,7 +8,7 @@ import {
 	Linking,
 	PermissionsAndroid,
 	Platform,
-	Button,
+	// Button,
 	ToastAndroid,
 } from 'react-native';
 import Config from 'react-native-config';
@@ -124,11 +125,13 @@ const App = () => {
 
 	return (
 		<SafeAreaView>
-			<Text bold>Weather Location App</Text>
-			<Text>- Hermes is in use: {isHermes()}</Text>
-			<Text>- Env {Config.ENV}</Text>
-			<Text>- Text </Text>
-			<Button title='Get Location' onPress={getLocation} />
+			<Text bold color='#2E3151'>
+				Weather Location App
+			</Text>
+			<Text color='#2E3151'>- Hermes is in use: {isHermes()}</Text>
+			<Text color='#2E3151'>- Env {Config.ENV}</Text>
+			<Text color='#2E3151'>- Text </Text>
+			<Button title='Get Location' primary onPress={getLocation} />
 		</SafeAreaView>
 	);
 };
