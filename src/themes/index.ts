@@ -7,9 +7,16 @@ export const theme: Theme = {
 		medium: 'Montserrat-Medium',
 		size: 16,
 	},
-	color: {
+	colors: {
+		base: '#FFFFFF',
+		default: '#E58644',
 		primary: '#2E3151',
 		secondary: '#7A7792',
 		background: '#FDFCF3ma',
+	},
+	spacing: {
+		base: 15,
+		small: 10,
+		large: 20,
 	},
 };
