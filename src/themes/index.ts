@@ -12,7 +12,7 @@ export const theme: Theme = {
 		default: '#E58644',
 		primary: '#2E3151',
 		secondary: '#7A7792',
-		background: '#FDFCF3ma',
+		background: '#FDFCF3',
 	},
 	spacing: {
 		base: 15,
