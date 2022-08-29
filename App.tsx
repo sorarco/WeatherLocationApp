@@ -1,4 +1,5 @@
 import {Button} from '@components/Button/index';
+import {Layout} from '@components/Layout/index';
 import {Text} from '@components/Text/index';
 import createLogger from '@services/log.service';
 import React, {useState} from 'react';
@@ -124,15 +125,17 @@ const App = () => {
 	};
 
 	return (
-		<SafeAreaView>
-			<Text bold color='#2E3151'>
-				Weather Location App
-			</Text>
-			<Text color='#2E3151'>- Hermes is in use: {isHermes()}</Text>
-			<Text color='#2E3151'>- Env {Config.ENV}</Text>
-			<Text color='#2E3151'>- Text </Text>
-			<Button title='Get Location' primary onPress={getLocation} />
-		</SafeAreaView>
+		<Layout>
+			<SafeAreaView>
+				<Text bold color='#2E3151'>
+					Weather Location App
+				</Text>
+				<Text color='#2E3151'>- Hermes is in use: {isHermes()}</Text>
+				<Text color='#2E3151'>- Env {Config.ENV}</Text>
+				<Text color='#2E3151'>- Text </Text>
+				<Button title='Get Location' primary onPress={getLocation} />
+			</SafeAreaView>
+		</Layout>
 	);
 };
 
