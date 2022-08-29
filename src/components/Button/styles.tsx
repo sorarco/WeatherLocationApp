@@ -9,5 +9,6 @@ export const Button = styled.TouchableOpacity<Props>`
 		props.secondary && `background-color: ${props.theme.colors.secondary}`};
 	font-size: ${props =>
 		(props.size && `${props.size}px`) ?? `${props.theme.fonts.size}px`};
-	padding: ${props => `${props.theme.spacing.base}px`};
+	padding: ${props => `${props.theme.spacing.small}px`};
+	border-radius: 12px;
 `;

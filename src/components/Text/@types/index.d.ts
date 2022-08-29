@@ -7,4 +7,5 @@ export interface Props extends TextProps {
 	size?: number;
 	color?: string;
 	align?: 'left' | 'center' | 'right';
+	padding?: number;
 }

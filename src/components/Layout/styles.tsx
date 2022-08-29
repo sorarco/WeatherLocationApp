@@ -7,4 +7,5 @@ export const Layout = styled.View`
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	background-color: ${props => props.theme.colors.background};
 `;

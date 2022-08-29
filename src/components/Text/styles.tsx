@@ -11,4 +11,5 @@ export const Text = styled.Text<Props>`
 	color: ${props =>
 		props.color ? `${props.color}` : `${props.theme.colors.base}`};
 	text-align: ${props => props.align ?? 'left'};
+	padding: ${props => `${props.padding ?? props.theme.spacing.base}px`};
 `;
