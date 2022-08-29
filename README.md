@@ -143,6 +143,10 @@ yarn ios:dev-stg
 yarn clean
 ```
 
+```bash
+yarn test
+```
+
 **Caso tenha problemas com permissão ao executar o arquivo clean.sh**
 
 chmod 775 clean.sh
