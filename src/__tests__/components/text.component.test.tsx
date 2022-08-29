@@ -1,14 +1,13 @@
 /* eslint-disable import/extensions */
 
 import 'react-native';
-// import {fireEvent, render} from '@testing-library/react-native';
+import {Text} from '@components/Text/index';
 import React from 'react';
 
-import {Text} from '../../components/Text';
 import {render} from '../test-utils';
 
 describe('<Text/>', () => {
-	test('should render without crashing', () => {
+	test('should render text component without crashing', () => {
 		const text = 'Weather Location App';
 		const textComponent = <Text testID='text-component'>{text}</Text>;
 		const {container} = render(textComponent);
