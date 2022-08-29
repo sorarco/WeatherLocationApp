@@ -8,4 +8,7 @@ export const Text = styled.Text<Props>`
 	${props => props.bold && `font-family: ${props.theme.fonts.bold}`};
 	font-size: ${props =>
 		(props.size && `${props.size}px`) ?? `${props.theme.fonts.size}px`};
+	color: ${props =>
+		props.color ? `${props.color}` : `${props.theme.colors.base}`};
+	text-align: ${props => props.align ?? 'left'};
 `;

@@ -5,4 +5,6 @@ export interface Props extends TextProps {
 	regular?: boolean;
 	medium?: boolean;
 	size?: number;
+	color?: string;
+	align?: 'left' | 'center' | 'right';
 }
