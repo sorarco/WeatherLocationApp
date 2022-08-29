@@ -13,7 +13,7 @@ export const api = createApi({
 	endpoints: builder => ({
 		getWeather: builder.query<LocationResponseDto, LocationRequestDto>({
 			query: ({lat, lon}) =>
-				`/weather?lat=${lat}&lon=${lon}&lang=pt_br&appid=${API_OPEN_WEATHER_MAP_KEY}`,
+				`/weather?lat=${lat}&lon=${lon}&lang=pt_br&appid=${API_OPEN_WEATHER_MAP_KEY}&units=metric`,
 		}),
 	}),
 });
