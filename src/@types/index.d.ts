@@ -10,10 +10,17 @@ declare module '@emotion/react' {
 			medium: string;
 			size: number;
 		};
-		color: {
+		colors: {
+			base: string;
+			default: string;
 			primary: string;
 			secondary: string;
 			background: string;
+		};
+		spacing: {
+			base: number;
+			small: number;
+			large: number;
 		};
 	}
 }
