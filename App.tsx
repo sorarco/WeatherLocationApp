@@ -1,3 +1,4 @@
+import {Text} from '@components/Text/index';
 import createLogger from '@services/log.service';
 import React, {useState} from 'react';
 import {
@@ -7,7 +8,6 @@ import {
 	PermissionsAndroid,
 	Platform,
 	Button,
-	Text,
 	ToastAndroid,
 } from 'react-native';
 import Config from 'react-native-config';
@@ -124,9 +124,10 @@ const App = () => {
 
 	return (
 		<SafeAreaView>
-			<Text>Weather Location App</Text>
+			<Text bold>Weather Location App</Text>
 			<Text>- Hermes is in use: {isHermes()}</Text>
 			<Text>- Env {Config.ENV}</Text>
+			<Text>- Text </Text>
 			<Button title='Get Location' onPress={getLocation} />
 		</SafeAreaView>
 	);
