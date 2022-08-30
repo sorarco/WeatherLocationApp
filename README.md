@@ -191,7 +191,7 @@ Resumidamente, o serviço retorna dados do clima local com base nos seguintes pa
 
 - [lat] - (Latitude fornecido através do módulo react-native-geolocation-service)
 - [lon] - (Longitude fornecido através do módulo react-native-geolocation-service)
-- [appid] - chave da api ativada
+- [appid] - chave da api ativada e configurada nos arquivos arquivos (.env|.env.staging|.evn.production) na entrada API_OPEN_WEATHER_MAP_KEY
 
 ## 🌐 Lidando com estados e requisições
 
