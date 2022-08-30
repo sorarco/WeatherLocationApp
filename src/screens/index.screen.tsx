@@ -36,17 +36,17 @@ const IndexScreen = () => {
 						</Layout>
 
 						<Text color='#2E3151' align='center' size={30} bold>
-							{main.temp}
+							{main?.temp}
 						</Text>
 						<Text color='#2E3151' align='center'>
-							{weather.description}
+							{weather?.description}
 						</Text>
 						<ViewRow>
 							<Text color='#2E3151' align='center'>
-								Min.: {main.temp_min}
+								Min.: {main?.temp_min}
 							</Text>
 							<Text color='#2E3151' align='center'>
-								Max.: {main.temp_max}
+								Max.: {main?.temp_max}
 							</Text>
 						</ViewRow>
 					</View>
