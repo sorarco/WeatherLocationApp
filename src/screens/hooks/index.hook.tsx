@@ -1,5 +1,5 @@
 import {useGetWeatherQuery} from '@api/index';
-import {LocationRequestDto} from '@dto/locationRequest.dto';
+import {LocationRequestDto} from '@dto/location.dto';
 import createLogger from '@services/log.service';
 import {useEffect, useState} from 'react';
 import {

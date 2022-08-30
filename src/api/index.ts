@@ -1,7 +1,4 @@
-import {
-	LocationRequestDto,
-	LocationResponseDto,
-} from '@dto/locationRequest.dto';
+import {LocationRequestDto, LocationResponseDto} from '@dto/location.dto';
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 import Config from 'react-native-config';
 

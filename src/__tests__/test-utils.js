@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-shadow */
-// /* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/react-in-jsx-scope */
 import {ThemeProvider} from '@emotion/react';
 import {render} from '@testing-library/react-native';
 import {theme} from '@themes/index';
