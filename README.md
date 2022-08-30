@@ -129,28 +129,6 @@ Após, clique em _Create Virtual Device_, escolha qualquer dispositivo e então 
 
 Se tudo ocorrer bem, você poderá iniciar o dispositivo clicando no botão de Play no AVD.
 
-Após iniciar o dispositivo, você poderá rodar o aplicativo usando:
-
-```bash
-yarn android:dev-stg
-```
-
-```bash
-yarn ios:dev-stg
-```
-
-```bash
-yarn clean
-```
-
-```bash
-yarn test
-```
-
-**Caso tenha problemas com permissão ao executar o arquivo clean.sh**
-
-chmod 775 clean.sh
-
 **Observação importante**: Caso você tenha algum problema ao rodar o projeto em dispositivos Apple com chipset M1, você pode tentar rodá-lo usando o Rosetta:
 
 1. Abra a pasta de _Applications_;
@@ -166,6 +144,12 @@ Agora, é só usar esse Terminal com Rosetta para iniciar a aplicação.
 Os principais pacotes dessa aplicação são:
 
 - [react-native](https://reactnative.dev/docs/0.68/getting-started): 0.68
+- [react-native-geolocation-service](https://github.com/Agontuk/react-native-geolocation-service)
+- [@reduxjs/toolkit](https://redux-toolkit.js.org/)
+- [react-redux](https://react-redux.js.org/)
+- [emotion.sh](https://emotion.sh/docs/introduction)
+- [jest](https://jestjs.io/)
+- [testing-library](https://testing-library.com/)
 
 ## Suporte ao Hermes
 
@@ -178,14 +162,16 @@ Fornecer segurança e boas práticas na separação de configs de dados com base
 ## Estrutura de projeto
 
 ```
-[src]
-    + [__tests__]
-    + [api]
-    + [components]
-    + [dto]
-    + [services]
-    + [screens]
-    + [store]
+src
+├── @tests         # testes dos componentes, serviços e telas
+├── @types         # definições dos tipos (*.d.ts)
+├── @themes        # definições dos temas da aplicação
+├── @api           # redux query
+├── @components    # componentes da aplicação
+├── @dto           # payload (request,response)
+├── @services      # serviços da aplicação
+├── @screens       # telas da aplicação e seus hooks
+├── @store         # store global da aplicação
 ```
 
 As definições de implementação a partir da estrutura de projeto podem ser usadas por meio de caminhos absolutos.
@@ -197,8 +183,54 @@ const log = createLogger('log');
 log('some log');
 ```
 
+## 🌐 Integração com serviço OpenWeathermap
+
+Para obter os dados de clima é utilizada o serviço [OpenWeathermap](https://openweathermap.org/current)
+
+Resumidamente, o serviço retorna dados do clima local com base nos seguintes parâmetros obrigatórios.
+
+- [lat] - (Latitude fornecido através do módulo react-native-geolocation-service)
+- [lon] - (Longitude fornecido através do módulo react-native-geolocation-service)
+- [appid] - chave da api ativada
+
 ## 🌐 Lidando com estados e requisições
 
 O gerenciamento dos estados na aplicação é baseado no [redux-toolkit](https://redux-toolkit.js.org/).
 
 Para lidar com requisições entre api's além de oferecer controle de cache sem a necessidade de escrever estas features, é usado o [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
+
+### Veja um exemplo:
+
+```tsx
+const [weatherResult, {onPressSend}] = useWeatherHook();
+```
+
+## Execução dos scripts
+
+As definições dos scripts são orquestadros via [npm scripts](https://docs.npmjs.com/misc/scripts).
+Fica a seu critério usar `npm` ou `yarn`.
+
+| Script            | Description                                                       |
+| ----------------- | ----------------------------------------------------------------- |
+| `clean`           | Executa uma séries de limpeza e instalação.                       |
+| `android:dev-stg` | Inicia a exeução do android em **debug** mode.                    |
+| `ios:dev-stg`     | Inicia a exeução do ios em **debug** mode.                        |
+| `test`            | Execução de todos os arquivos de testes (Jest + testing-library). |
+
+**Caso tenha problemas com permissão ao executar o arquivo clean.sh**
+
+chmod 775 clean.sh
+
+## Telas da aplicação
+
+**_Introdução_**
+
+![intro](screenshots/intro.png)
+
+**_Permissão_**
+
+![permission](screenshots/permission.png)
+
+**_Clima_**
+
+![weather](screenshots/weather.png)
